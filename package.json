@@ -1,10 +1,13 @@
 {
   "name": "v-base-components",
+  "type": "module",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "dependencies": {
     "@mdi/font": "6.2.95",
@@ -13,13 +16,23 @@
     "vuetify": "^3.5.8"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^2.8.2",
     "@babel/types": "^7.24.0",
     "@types/node": "^20.11.25",
     "@vitejs/plugin-vue": "^5.0.4",
+    "eslint": "^8.57.0",
+    "lint-staged": "^15.2.2",
+    "simple-git-hooks": "^2.10.0",
     "typescript": "^5.4.2",
     "unplugin-fonts": "^1.1.1",
     "vite": "^5.1.5",
     "vite-plugin-vuetify": "^2.0.3",
     "vue-tsc": "^2.0.6"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
   }
 }
