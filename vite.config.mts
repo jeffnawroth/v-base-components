@@ -1,5 +1,6 @@
 // Plugins
 import { URL, fileURLToPath } from 'node:url'
+import { resolve } from 'node:path'
 import Vue from '@vitejs/plugin-vue'
 import Vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 import ViteFonts from 'unplugin-fonts/vite'
@@ -41,5 +42,20 @@ export default defineConfig({
   },
   server: {
     port: 3000,
+  },
+  build: {
+    lib: {
+      entry: resolve(__dirname, 'src/index.ts'),
+      name: 'VBaseComponents',
+      fileName: 'v-base-components',
+    },
+    rollupOptions: {
+      external: ['vue', 'vuetify'],
+      output: {
+        globals: {
+          vue: 'Vue',
+        },
+      },
+    },
   },
 })
