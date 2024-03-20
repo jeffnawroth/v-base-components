@@ -4,6 +4,7 @@ import { resolve } from 'node:path'
 import Vue from '@vitejs/plugin-vue'
 import Vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 import ViteFonts from 'unplugin-fonts/vite'
+import AutoImport from 'unplugin-auto-import/vite'
 
 // Utilities
 import { defineConfig } from 'vite'
@@ -24,6 +25,15 @@ export default defineConfig({
         }],
       },
     }),
+    AutoImport(
+      {
+        imports: [
+          'vue',
+        ],
+        dts: 'src/auto-imports.d.ts',
+        vueTemplate: true,
+      },
+    ),
   ],
   define: { 'process.env': {} },
   resolve: {

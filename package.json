@@ -12,7 +12,9 @@
   "main": "dist/v-base-components.umd.cjs",
   "module": "dist/v-base-components..js",
   "types": "dist/index.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vite build && vue-tsc --emitDeclarationOnly",
@@ -34,6 +36,7 @@
     "lint-staged": "^15.2.2",
     "simple-git-hooks": "^2.10.0",
     "typescript": "^5.4.2",
+    "unplugin-auto-import": "^0.17.5",
     "unplugin-fonts": "^1.1.1",
     "vite": "^5.1.5",
     "vite-plugin-vuetify": "^2.0.3",
