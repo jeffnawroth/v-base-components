@@ -30,7 +30,6 @@ export default defineConfig({
         imports: [
           'vue',
         ],
-        dts: 'src/auto-imports.d.ts',
         vueTemplate: true,
       },
     ),
