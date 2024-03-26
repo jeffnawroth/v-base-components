@@ -11,6 +11,7 @@ const dialog = defineModel<boolean>({ required: true })
 <template>
   <v-dialog v-model="dialog">
     <v-card v-bind="$attrs">
+      <!-- TODO: Fix error -->
       <template v-for="(_, slotName) in $slots" :key="slotName" #[(slotName)]="slotData ">
         <slot :name="slotName" v-bind="slotData || {}" />
       </template>
