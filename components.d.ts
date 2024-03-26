@@ -7,6 +7,7 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    VBaseDialog: typeof import('./src/components/VBaseDialog.vue')['default']
+    VBaseDialog: typeof import('./src/components/Dialogs/VBaseDialog.vue')['default']
+    VDeleteDialog: typeof import('./src/components/Dialogs/VDeleteDialog.vue')['default']
   }
 }
