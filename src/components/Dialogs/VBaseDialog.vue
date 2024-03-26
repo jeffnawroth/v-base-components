@@ -4,6 +4,8 @@ defineOptions({
   inheritAttrs: false,
 })
 
+// test
+
 // Props
 const dialog = defineModel<boolean>({ required: true })
 </script>
