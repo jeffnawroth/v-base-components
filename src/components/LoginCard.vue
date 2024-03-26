@@ -8,8 +8,6 @@ const password = defineModel('password', { required: true, type: String })
 
 // State
 const form = ref<HTMLFormElement | null>(null)
-
-// test
 </script>
 
 <template>
