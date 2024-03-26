@@ -1,10 +1,10 @@
 <script setup lang="ts">
 // Props
 interface Props {
-  title: string
-  subtitle: string
-  type: string
-  name: string
+  title?: string
+  subtitle?: string
+  type?: string
+  name?: string
 }
 
 withDefaults(defineProps<Props>(), {
@@ -12,20 +12,20 @@ withDefaults(defineProps<Props>(), {
   subtitle: 'Möchten Sie wirklich löschen?',
 })
 
-const dialog = defineModel<boolean>({ required: true })
+const model = defineModel<boolean>({ required: true })
 
 // Functions
 function handleDialog() {
-  dialog.value = !dialog.value
+  model.value = !model.value
 }
 
 function handleDelete() {
-  dialog.value = false
+  model.value = false
 }
 </script>
 
 <template>
-  <VBaseDialog v-model="dialog" :title :subtitle>
+  <VBaseDialog v-model="model" :title :subtitle>
     <template #actions>
       <v-btn @click="handleDialog">
         Abbrechen
