@@ -7,6 +7,7 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
+    LoginCard: typeof import('./src/components/LoginCard.vue')['default']
     VBaseDialog: typeof import('./src/components/Dialogs/VBaseDialog.vue')['default']
     VDeleteDialog: typeof import('./src/components/Dialogs/VDeleteDialog.vue')['default']
   }

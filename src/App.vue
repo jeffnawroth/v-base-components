@@ -1,13 +1,8 @@
 <script setup lang="ts">
-const dialog = ref(false)
-
-function handleDialog() {
-  dialog.value = !dialog.value
-}
+const password = ref('')
+const email = ref('')
 </script>
 
 <template>
-  <v-btn text="open" @click="handleDialog" />
-
-  <VDeleteDialog v-model="dialog" />
+  <LoginCard v-model:email="email" v-model:password="password" />
 </template>
