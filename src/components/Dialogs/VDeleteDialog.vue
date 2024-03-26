@@ -8,8 +8,8 @@ interface Props {
 }
 
 withDefaults(defineProps<Props>(), {
-  title: 'Löschen',
-  subtitle: 'Möchten Sie wirklich löschen?',
+  title: 'Delete',
+  subtitle: 'Are you sure you want to delete?',
 })
 
 const model = defineModel<boolean>({ required: true })
@@ -28,10 +28,10 @@ function handleDelete() {
   <VBaseDialog v-model="model" :title :subtitle>
     <template #actions>
       <v-btn @click="handleDialog">
-        Abbrechen
+        Cancel
       </v-btn>
       <v-btn @click="handleDelete">
-        Löschen
+        Delete
       </v-btn>
     </template>
   </VBaseDialog>
