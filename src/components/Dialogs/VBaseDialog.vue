@@ -1,8 +1,10 @@
 <script setup lang="ts">
+// Options
 defineOptions({
   inheritAttrs: false,
 })
 
+// Props
 const dialog = defineModel<boolean>({ required: true })
 </script>
 
