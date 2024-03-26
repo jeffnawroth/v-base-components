@@ -1,9 +1,12 @@
 <script setup lang="ts">
+// Emits
 defineEmits(['submit'])
 
+// Props
 const email = defineModel('email', { required: true, type: String })
 const password = defineModel('password', { required: true, type: String })
 
+// State
 const form = ref<HTMLFormElement | null>(null)
 </script>
 
