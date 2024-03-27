@@ -25,7 +25,11 @@ function handleDelete() {
 </script>
 
 <template>
-  <VBaseDialog v-model="model" :title :subtitle>
+  <VBaseDialog
+    v-model="model"
+    :title
+    :subtitle
+  >
     <template #actions>
       <v-btn @click="handleDialog">
         Cancel
