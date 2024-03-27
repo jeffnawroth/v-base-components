@@ -1,10 +1,12 @@
 import antfu from '@antfu/eslint-config'
 
 export default antfu({
+  vue: {
+    overrides: {
+      'vue/max-attributes-per-line': 'error',
+    },
+  },
   ignores: [
     'src/vite-env.d.ts',
   ],
-  rules: {
-    'vue/max-attributes-per-line': 'error',
-  },
 })
